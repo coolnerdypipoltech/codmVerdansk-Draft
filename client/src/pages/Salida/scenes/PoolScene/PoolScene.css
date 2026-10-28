@@ -1,0 +1,72 @@
+.poolscene {
+  background-image: url(../../assets/bg-pool.webp);
+  background-size: cover;
+  background-position: center;
+}
+
+.poolscene__hd {
+  position: absolute;
+  left: 64px;
+  top: 36px;
+  max-width: calc(100% - 128px);
+}
+.poolscene__title {
+  font-size: 104px;
+
+}
+
+.poolscene__grid {
+  position: absolute;
+  left: 64px;
+  right: 64px;
+  top: 210px;
+  bottom: 96px;
+  display: grid;
+  gap: 10px 16px;
+  align-content: start;
+}
+.poolscene__grid--dense .poolscene__item {
+  padding: 0 10px;
+  gap: 8px;
+}
+.poolscene__grid--dense .poolscene__item i {
+  min-width: 38px;
+  height: 28px;
+  font-size: 13px;
+}
+.poolscene__grid--dense .poolscene__item span {
+  font-size: 26px;
+}
+
+.poolscene__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--panel);
+  border: 2px solid var(--line);
+  border-radius: 10px;
+  padding: 0 14px;
+  height: 62px;
+  min-width: 0;
+}
+.poolscene__item i {
+  font: 400 20px/1 var(--f-label);
+  font-style: normal;
+  color: #ffffff;
+  background: url(../../assets/banner-num.png) no-repeat center center;
+  background-size: cover;
+  border-radius: 6px;
+  min-width: 46px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+.poolscene__item span {
+  font: 600 32px/1 var(--f-body);
+  color: var(--white);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,1 @@
+Aqui se guarda automaticamente el estado del draft (estado.json). Copia esta carpeta como respaldo.

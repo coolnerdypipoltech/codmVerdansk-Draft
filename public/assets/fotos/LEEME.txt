@@ -1,0 +1,2 @@
+Aqui van las fotos de los creadores (PNG o JPG, cuadradas, minimo 300 x 300 px).
+En el CSV de creadores, en la columna "foto", escribe la ruta asi:  /assets/fotos/creador01.png

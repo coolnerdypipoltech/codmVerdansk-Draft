@@ -1,0 +1,126 @@
+.boardscene {
+  background-image: url(../../assets/bg-board.webp);
+  background-size: cover;
+  background-position: center;
+}
+
+.boardscene__hd {
+  position: absolute;
+  left: 64px;
+  top: 30px;
+  
+}
+
+.boardscene__tag {
+  position: absolute;
+  left: 760px;
+  top: 40px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  height: 104px;
+  font: 400 15px/1 var(--f-label);
+  letter-spacing: 0.2em;
+  color: var(--ink-2);
+  text-transform: uppercase;
+  transition: opacity 0.3s;
+}
+.boardscene__tag b {
+  font: 400 56px/1 var(--f-title);
+  color: var(--ink);
+  letter-spacing: 0.02em;
+}
+.boardscene__tag--off {
+  opacity: 0;
+}
+.boardscene__pill {
+  border: 2px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 18px 12px;
+  background: var(--panel);
+}
+.boardscene__pill b {
+  display: block;
+  margin-top: 8px;
+}
+
+.boardscene__pool {
+  position: absolute;
+  left: 64px;
+  top: 176px;
+  width: 500px;
+  height: 828px;
+  background: var(--panel);
+  border: 2px solid var(--line);
+  border-radius: 14px;
+  padding: 16px 18px;
+}
+.boardscene__pool-h {
+  margin: 0 0 10px;
+  font: 400 14px/1 var(--f-label);
+  letter-spacing: 0.22em;
+  color: var(--white);
+  text-transform: uppercase;
+}
+.boardscene__pool-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 16px;
+  height: calc(100% - 28px);
+}
+.boardscene__pool-col {
+  display: grid;
+  grid-template-rows: repeat(var(--rows), 1fr);
+}
+.boardscene__pool-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 5px;
+  padding: 0 6px;
+  transition:
+    opacity 0.4s,
+    background 0.3s;
+  min-width: 0;
+}
+.boardscene__pool-item i {
+  font-size: 14px;
+  font-family: 'Montserrat';
+
+  color: var(--yellow);
+  font-style: normal;
+  width: 30px;
+  flex: none;
+}
+.boardscene__pool-item span {
+  font-size: 21px;
+  font-family: 'Oswald';
+  color: var(--white);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: 0.01em;
+  line-height: 1.48;
+}
+.boardscene__pool-item--done {
+  opacity: 0.2;
+}
+.boardscene__pool-item--cur {
+  opacity: 1;
+  background: var(--red);
+  
+}
+
+
+.boardscene__pool-item--cur i,
+.boardscene__pool-item--cur span {
+  color: #ffffff;
+}
+
+.boardscene__grid {
+  position: absolute;
+  left: 600px;
+  top: 176px;
+  width: 1256px;
+  display: grid;
+}

@@ -1,0 +1,45 @@
+.footer {
+  position: absolute;
+  left: 64px;
+  right: 64px;
+  bottom: 22px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: opacity 0.3s;
+}
+.footer__side {
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+  height: 100%;
+}
+.footer__side img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+.footer__txt {
+  font: 400 16px/1.2 var(--f-label);
+  letter-spacing: 0.16em;
+  color: var(--ink-1);
+  text-transform: uppercase;
+}
+.footer__mark {
+  font: 400 34px/1 var(--f-title);
+  color: var(--ink);
+  text-transform: uppercase;
+  filter: url(#rough);
+  letter-spacing: 0.01em;
+  z-index: 0;
+  position: relative;
+}
+.footer__mark small {
+  display: block;
+  font: 400 9px/1.2 var(--f-label);
+  letter-spacing: 0.2em;
+  color: var(--ink-3);
+  margin-top: 3px;
+  filter: none;
+}

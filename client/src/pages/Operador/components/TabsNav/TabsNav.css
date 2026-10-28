@@ -1,0 +1,6 @@
+.tabsnav{display:flex;gap:6px;flex-wrap:wrap}
+.tabsnav__tab{
+  padding:10px 18px;border:1px solid var(--line);background:var(--panel);border-radius:var(--radius-lg) var(--radius-lg) 0 0;
+  cursor:pointer;font-weight:600;color:var(--ink-2);
+}
+.tabsnav__tab[aria-selected="true"]{background:var(--yellow);color:#14160f;border-color:var(--yellow)}

@@ -1,0 +1,111 @@
+.salida-page {
+  /* Paleta y tipografía de la salida (gráficos en pantalla) */
+  --bg: #0b0c0a;
+  --black: #000000;
+  --white: #ffffff;
+  --ink: #aeaeae;
+  --ink-2: #b5bba3;
+  --ink-3: #7e8570;
+  --yellow: #d6a92d;
+  --olive: #7ba650;
+  --green: #34d27b;
+  --red: #aa261a;
+  --panel: rgba(16, 18, 13, 0.9);
+  --line: #383838;
+  --line-hot: #e4c71e;
+  --f-title: "Anton";
+  --f-label: "Montserrat";
+  --f-body: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --f-text: "Barlow", "Arial", sans-serif;
+}
+
+html.salida-active,
+body.salida-active {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: transparent;
+}
+body.salida-active.salida-bg-croma {
+  background: #00b140;
+}
+
+/* #root trae un fondo oscuro de respaldo (ver index.css) que, sin esto, tapa
+   el croma verde del body y rompe la transparencia real para OBS/vMix. */
+body.salida-active.salida-bg-transparente #root,
+body.salida-active.salida-bg-croma #root {
+  background: transparent;
+}
+
+/* Con fondo transparente o croma, las imágenes de fondo de cada escena también se quitan */
+body.salida-active.salida-bg-transparente .boardscene,
+body.salida-active.salida-bg-transparente .poolscene,
+body.salida-active.salida-bg-transparente .finalscene,
+body.salida-active.salida-bg-transparente .squadscene,
+body.salida-active.salida-bg-croma .boardscene,
+body.salida-active.salida-bg-croma .poolscene,
+body.salida-active.salida-bg-croma .finalscene,
+body.salida-active.salida-bg-croma .squadscene {
+  background-image: none;
+}
+
+.salida-page__viewport {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  max-width: 1920px;
+  height: 1080px;
+  aspect-ratio: 16 / 9;
+}
+.salida-page__stage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1920px;
+  height: 1080px;
+  aspect-ratio: 16 / 9;
+  transform-origin: 0 0;
+  color: var(--ink);
+  font-family: var(--f-body);
+}
+
+/* Capas de escena: se cruzan con una transición de opacidad */
+.layer {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.35s,
+    visibility 0s 0.35s;
+}
+.layer--on {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.35s;
+}
+
+/* Encabezados compartidos por varias escenas */
+.kicker {
+  font: 400 15px/1.2 var(--f-label);
+  letter-spacing: 0.26em;
+  color: var(--black);
+  text-transform: uppercase;
+}
+.title {
+  margin: 8px 0 0;
+  font: 400 92px/0.95 var(--f-title);
+  color: var(--black);
+  text-transform: uppercase;
+  filter: url(#rough);
+  letter-spacing: 0.01em;
+    font-family: 'Anton';
+}
+
+.salida-page__offline {
+  position: absolute;
+  right: 16px;
+  top: 8px;
+  font: 12px var(--f-text);
+  color: #ff7a59;
+}

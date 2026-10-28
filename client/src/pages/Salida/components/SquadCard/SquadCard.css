@@ -1,0 +1,149 @@
+.squadcard {
+  position: relative;
+  height: 160px;
+  background: var(--panel);
+  border: 2px solid var(--line);
+  border-radius: 12px;
+  padding: 8px 12px 8px;
+  overflow: hidden;
+  z-index: 1;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
+}
+.squadcard--hit {
+  border-color: var(--yellow);
+  box-shadow:
+    0 0 0 3px rgba(228, 199, 30, 0.35),
+    0 0 36px rgba(228, 199, 30, 0.28);
+}
+
+.squadcard__head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 34px;
+  margin-bottom: 8px;
+}
+.squadcard__name {
+  font: 400 26px/1 var(--f-title);
+  font-family: 'Oswald';
+  font-weight: 600;
+  color: var(--white);
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: 0.02em;
+}
+.squadcard__photo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex: none;
+}
+.squadcard__level {
+  margin-left: auto;
+  display: flex;
+  gap: 3px;
+}
+.squadcard__level-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--line);
+  display: inline-block;
+}
+.squadcard__level-dot--on {
+  background: var(--green);
+}
+
+.squadcard__rows {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  height: calc(100% - 36px);
+  gap: 0;
+}
+.squadcard__row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+}
+.squadcard__row i {
+  flex: none;
+  min-width: 34px;
+  height: 23px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 400 12px/1 var(--f-label);
+  font-style: normal;
+  color: #ffffff;
+  background: url("../../assets/banner-num.png") no-repeat center center;
+  background-size: 100%;
+}
+
+.squadcard__row--d2 i {
+  background: var(--olive);
+}
+.squadcard__row span {
+  font: 600 23px/1 var(--f-body);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--white);
+}
+.squadcard__row--empty i {
+
+  background: url("../../assets/banner-num-off.png") no-repeat center center;
+
+  color: transparent;
+}
+.squadcard__row--empty span {
+  color: transparent;
+}
+.squadcard__row--bench {
+  opacity: 0.5;
+}
+.squadcard__row--bench::after {
+  content: "BANCA";
+  font: 400 10px var(--f-label);
+  letter-spacing: 0.14em;
+  color: var(--ink-2);
+  margin-left: auto;
+  flex: none;
+}
+.squadcard__row--sub span::after {
+  content: " ↻";
+  color: var(--green);
+  font-size: 18px;
+}
+.squadcard__row--new {
+  animation: squadcard-stamp 0.55s cubic-bezier(0.2, 1.4, 0.3, 1);
+}
+@keyframes squadcard-stamp {
+  0% {
+    transform: scale(1.5);
+    opacity: 0;
+    filter: brightness(2);
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+    filter: none;
+  }
+}
+
+/* Tarjetas más compactas en la escena de resultado final (dos columnas) */
+.squadcard--final {
+  height: 150px;
+}
+.squadcard--final .squadcard__rows {
+  height: calc(100% - 36px);
+}
+.squadcard--final .squadcard__row span {
+  font-size: 22px;
+}

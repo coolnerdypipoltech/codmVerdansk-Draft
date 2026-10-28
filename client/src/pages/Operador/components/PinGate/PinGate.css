@@ -1,0 +1,9 @@
+.pingate{
+  position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:100;
+  display:flex;align-items:center;justify-content:center;
+}
+.pingate__box{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-2xl);
+  padding:24px;width:min(380px,92vw);display:flex;flex-direction:column;gap:12px;
+}
+.pingate__input{width:100%}

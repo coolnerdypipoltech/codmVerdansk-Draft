@@ -1,0 +1,8 @@
+.toast{
+  position:fixed;left:50%;bottom:24px;transform:translateX(-50%);
+  background:#000;border:1px solid var(--line);padding:10px 16px;border-radius:var(--radius-lg);
+  z-index:90;display:none;max-width:90vw;color:var(--ink);
+}
+.toast--on{display:block}
+.toast--bad{border-color:var(--red);color:var(--red)}
+.toast--ok{border-color:var(--green)}

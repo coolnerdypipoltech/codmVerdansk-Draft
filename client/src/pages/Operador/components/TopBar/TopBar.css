@@ -1,0 +1,16 @@
+.topbar{
+  position:sticky;top:0;z-index:30;background:var(--bg);padding-block:8px;border-bottom:1px solid var(--line);
+  display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:16px;align-items:center;
+}
+.topbar__preview{width:320px;height:180px;border:1px solid var(--line);border-radius:var(--radius-md);overflow:hidden;background:#000;position:relative}
+.topbar__preview-frame{border:0;width:100%;height:100%;display:block;pointer-events:none}
+.topbar__preview-lbl{position:absolute;left:6px;top:4px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;background:rgba(0,0,0,.65);padding:2px 6px;border-radius:var(--radius-sm);color:var(--ink-2)}
+.topbar__title{font-size:18px;font-weight:700;letter-spacing:.01em}
+.topbar__line{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:6px;color:var(--ink-2)}
+.topbar__step-row{margin-top:8px}
+.topbar .btn[aria-pressed="true"]{background:var(--yellow);color:#14160f;border-color:var(--yellow)}
+
+@media (max-width:900px){
+  .topbar{grid-template-columns:minmax(0,1fr)}
+  .topbar__preview{width:100%;height:auto;aspect-ratio:16/9}
+}

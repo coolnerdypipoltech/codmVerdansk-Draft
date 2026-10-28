@@ -1,0 +1,12 @@
+.operador-page{
+  /* Paleta y tipografía del panel de operación */
+  --bg:#12130f; --panel:#1b1d16; --panel-2:#23261d; --line:#363b2c;
+  --ink:#ecebdf; --ink-2:#b4b8a3; --ink-3:#80866f;
+  --yellow:#e4c71e; --green:#34d27b; --red:#ff6b57; --amber:#f0b43c; --olive:#7ba650;
+
+  min-height:100vh;background:var(--bg);color:var(--ink);font:14px/1.45 var(--font-ui);
+}
+.operador-page a{color:var(--yellow)}
+
+.operador-page__wrap{max-width:1360px;margin:0 auto;padding:12px 16px 64px;display:flex;flex-direction:column;gap:12px}
+.operador-page__loading{padding:48px;text-align:center}
