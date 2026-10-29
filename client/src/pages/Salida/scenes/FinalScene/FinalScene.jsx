@@ -21,6 +21,9 @@ function groupSquads(squads) {
     }
     return byFive;
   }
+  // "Farmacias Similares" (Dr. Simi) siempre va primero, sin importar el orden de los creadores en el CSV.
+  const firstIdx = groups.findIndex((g) => g.name === 'Farmacias Similares');
+  if (firstIdx > 0) groups.unshift(groups.splice(firstIdx, 1)[0]);
   return groups;
 }
 
