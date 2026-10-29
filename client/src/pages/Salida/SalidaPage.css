@@ -53,9 +53,7 @@ body.salida-active.salida-bg-croma .squadscene {
   position: fixed;
   inset: 0;
   overflow: hidden;
-  max-width: 1920px;
-  height: 1080px;
-  aspect-ratio: 16 / 9;
+  height: 100vh;
 }
 .salida-page__stage {
   position: absolute;
