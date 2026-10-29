@@ -20,7 +20,7 @@ export default function Importer({ kind, day, title, hint, chip }) {
   }
 
   async function run(commit) {
-    if (!text.trim()) { setResult({ errors: ['Pega o elige un archivo primero.'], warnings: [], count: 0 }); return; }
+    if (!text.trim()) { setResult({ errors: ['No hay nada que cargar: pega los datos aquí arriba o elige un archivo CSV primero.'], warnings: [], count: 0 }); return; }
     const j = await act('/api/import', { kind, text, day, commit }, commit ? 'Datos cargados.' : null);
     if (!j) return;
     setResult(j);

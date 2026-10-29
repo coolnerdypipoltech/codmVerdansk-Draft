@@ -355,7 +355,7 @@ function importData(body) {
     const result = { count: r.rows.length, errors: r.errors.slice(0, 40), warnings: r.warnings, committed: false, days: {} };
     const daysIn = [...new Set(r.rows.map(p => p.day).filter(Boolean))];
     daysIn.forEach(d => { result.days[d] = r.rows.filter(p => p.day === d).length; });
-    if (!state.creators.length) result.errors.push('Carga primero a los creadores.');
+    if (!state.creators.length) result.errors.push('Carga primero el archivo de creadores: los puestos de los jugadores dependen de cuántos creadores hay.');
     if (!r.errors.length && state.creators.length) {
       const tmp = state.players.filter(p => !daysIn.includes(p.day)).concat(r.rows.map(p => { const o = Object.assign({}, p); delete o.line; return o; }));
       const v = E.validateData(state.creators, tmp);
