@@ -2,7 +2,6 @@ export const BOTARGA_PHOTOS = {
   'Farmacias Similares': '/assets/botargas/botarga-1.png',
   'McCormick': '/assets/botargas/botarga-2.png',
   'Stori': '/assets/botargas/botarga-3.png',
-  'Alpura': '/assets/botargas/botarga-4.png',
   'Wisin': '/assets/botargas/botarga-5.png',
   'Moco de Gorila': '/assets/botargas/botarga-6.png',
   "French's": '/assets/botargas/botarga-7.png',
