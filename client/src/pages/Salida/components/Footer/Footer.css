@@ -43,3 +43,14 @@
   margin-top: 3px;
   filter: none;
 }
+
+
+.footer__logo {
+  height: 50px;
+  width: auto;
+  display: block;
+  position: absolute;
+  left: 95%;
+  transform: translateX(-50%);
+  top: -50%;
+}

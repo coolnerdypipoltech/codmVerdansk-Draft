@@ -1,19 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.b39aa659.css",
-    "main.js": "/static/js/main.28e654c9.js",
+    "main.css": "/static/css/main.e2d193da.css",
+    "main.js": "/static/js/main.f4b69056.js",
     "static/media/bg-final.webp": "/static/media/bg-final.6a6ea93eae87e51b1923.webp",
     "static/media/bg-squad.webp": "/static/media/bg-squad.29c6d3dfa00139cd7c07.webp",
     "static/media/bg-board.webp": "/static/media/bg-board.fd84051a2644ef121ab0.webp",
     "static/media/banner-gold.png": "/static/media/banner-gold.c7d3905abeaa66f631ff.png",
     "static/media/bg-pool.webp": "/static/media/bg-pool.81e25b0e5f5415783f7b.webp",
+    "static/media/simi.png": "/static/media/simi.836388f0ddbe555d1a97.png",
     "static/media/toast-banner.png": "/static/media/toast-banner.8f00644b65c3e3e4110c.png",
+    "static/media/banner-red-2.png": "/static/media/banner-red-2.4223c5be4e3f907a3a6e.png",
+    "static/media/fajito.png": "/static/media/fajito.9b81dd539e1b972501b2.png",
+    "static/media/tito.png": "/static/media/tito.c6607060fee316efe019.png",
+    "static/media/Ed.png": "/static/media/Ed.858c451691cc2d28cf88.png",
+    "static/media/moco_de_gorila.png": "/static/media/moco_de_gorila.bb28182ce40296d658bf.png",
+    "static/media/wisin_el_dog.png": "/static/media/wisin_el_dog.4a8ee8503851445a2472.png",
+    "static/media/Call_of_Duty_Mobile.svg": "/static/media/Call_of_Duty_Mobile.fe3a1bfdea9872c48b8414fbaf24decb.svg",
     "index.html": "/index.html",
-    "main.b39aa659.css.map": "/static/css/main.b39aa659.css.map",
-    "main.28e654c9.js.map": "/static/js/main.28e654c9.js.map"
+    "main.e2d193da.css.map": "/static/css/main.e2d193da.css.map",
+    "main.f4b69056.js.map": "/static/js/main.f4b69056.js.map"
   },
   "entrypoints": [
-    "static/css/main.b39aa659.css",
-    "static/js/main.28e654c9.js"
+    "static/css/main.e2d193da.css",
+    "static/js/main.f4b69056.js"
   ]
 }

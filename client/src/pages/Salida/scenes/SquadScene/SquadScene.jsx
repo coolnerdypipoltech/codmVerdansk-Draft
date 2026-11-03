@@ -1,6 +1,6 @@
 import { useSalida } from '../../SalidaContext';
 import { pad } from '../../../../shared/format';
-import { benchRef, BOTARGA_PHOTOS } from '../../salidaUtils';
+import { benchRef, BOTARGA_PHOTOS, BOTARGA_COMPANY } from '../../salidaUtils';
 import './SquadScene.css';
 
 function PrBox({ entry, day, bench }) {
@@ -34,6 +34,7 @@ function SquadDetail({ sq }) {
   const { S } = useSalida();
   const b = benchRef(S, sq);
   const botImg = sq.botarga && BOTARGA_PHOTOS[sq.botarga];
+  const company = sq.botarga && BOTARGA_COMPANY[sq.botarga];
 
   return (
     <div className="squadscene__grid">
@@ -47,7 +48,10 @@ function SquadDetail({ sq }) {
         )}
         <div className="squadscene__k">Squad</div>
         <div className="squadscene__name">{sq.name}</div>
-        {sq.botarga && <span className="squadscene__badge">{sq.botarga}</span>}
+        
+        {sq.botarga && <div className="squadscene__badge"  style={{ fontSize: '40px' }}>{sq.botarga} <br /> <span  style={{ fontSize: '26px' }}>
+          {company}</span></div>}
+
       </div>
       <div className="squadscene__right">
         {[0, 1].map((k) => <PrBox key={'d1-' + k} entry={sq.d1[k]} day={1} bench={!!(b && b.day === 1 && b.k === k)} />)}

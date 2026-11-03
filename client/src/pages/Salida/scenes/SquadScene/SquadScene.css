@@ -19,7 +19,7 @@
 .squadscene__pics {
   display: flex;
   align-items: flex-end;
-  gap: 26px;
+  gap: 1px;
   margin-bottom: 26px;
 }
 
@@ -27,32 +27,29 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  top: -30px;
 }
 
 
 .squadscene__photo {
   display: block;
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
+  height: 350px;
+  width: auto;
   object-fit: cover;
-  position: relative;
-  top: -20px;
-  left: 0px;
-  border: 4px solid var(--yellow);
+
   flex: none;
 }
 /* Imagen de la botarga: protagonista, más grande que la foto del creador */
 .squadscene__botimg {
-  height: 300px;
+  height: 350px;
   width: auto;
-  max-width: 320px;
   object-fit: contain;
   rotate: 0deg;
 }
 
 .squadscene__k {
-  font-size: 18px;
+  font-size: 24px;
   color: var(--black);
   text-transform: uppercase;
   font-weight: 700;
@@ -60,7 +57,7 @@
 }
 .squadscene__name {
   margin: 18px 0 14px;
-  font: 400 168px/0.9 var(--f-title);
+  font: 400 100px/0.9 var(--f-title);
   color: var(--black);
   text-transform: uppercase;
   filter: url(#rough);
@@ -70,11 +67,30 @@
   display: inline-block;
   font: 400 26px/1 var(--f-title);
   color: #ffffff;
-  background: var(--red);
-  padding: 12px 40px;
+  background: url(../../assets/banner-red-2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-align: center;
+  width: 500px;
+  height: 163px;
+  padding: 50px;
+  padding-top: 45px;
+  padding-right: 65px;
   border-radius: 8px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+.squadscene__badge + .squadscene__badge {
+  margin-top: 10px;
+}
+.squadscene__brand-logo {
+  display: block;
+  height: 120px;
+  width: auto;
+  max-width: 420px;
+  object-fit: contain;
+  margin-bottom: 10px;
 }
 
 .squadscene__right {
