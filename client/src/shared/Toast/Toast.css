@@ -17,7 +17,7 @@
 }
 .toast--bad {
   border-color: var(--red);
-  color: var(--red);
+
 }
 .toast--ok {
   border-color: var(--green);

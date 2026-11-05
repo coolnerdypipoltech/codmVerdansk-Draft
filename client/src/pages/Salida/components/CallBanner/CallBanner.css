@@ -9,7 +9,7 @@
   gap: 26px;
   padding: 0 30px;
   background: url("../../assets/toast-banner.png") no-repeat center center / 100%;
- 
+  justify-content: space-around;
   border-radius: 14px;
   transform: translateX(70px);
   opacity: 0;
@@ -44,15 +44,14 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  flex: 1 1 auto;
+  flex: 0 1 auto;
+  width: max-content;
+  max-width: 420px;
   min-width: 0;
 }
 .callbanner__a {
-
   flex: none;
   height: 40px;
-  position: absolute;
-  left: 53%;
 }
 .callbanner__c {
   font-weight: 400;
@@ -63,7 +62,5 @@
   text-transform: uppercase;
   text-overflow: ellipsis;
 
-  width: 300px;
-  min-width: 320px;
   text-align: left;
 }
