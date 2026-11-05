@@ -86,9 +86,7 @@
   background-size: 100%;
 }
 
-.squadcard__row--d2 i {
-  background: var(--olive);
-}
+
 .squadcard__row span {
   font: 600 23px/1 var(--f-body);
   white-space: nowrap;
