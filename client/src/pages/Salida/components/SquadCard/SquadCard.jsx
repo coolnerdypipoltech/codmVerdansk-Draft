@@ -22,7 +22,7 @@ export default function SquadCard({ sq, idx, hit, className }) {
     <div className={'squadcard' + (isHit ? ' squadcard--hit' : '') + (className ? ' ' + className : '')} data-i={idx}>
       <div className="squadcard__head">
         {sq.photo && <img className="squadcard__photo" src={sq.photo} alt="" />}
-        <div className="squadcard__name">{sq.name}</div>
+        <div className="squadcard__name" style={{ fontSize: sq.name.length > 13 ? '20px' : '26px' }} >{sq.name}</div>
         {showLevel && (
           <span className="squadcard__level">
             {[1, 2, 3, 4, 5].map((i) => <i key={i} className={i <= sq.tier ? 'squadcard__level-dot squadcard__level-dot--on' : 'squadcard__level-dot'} />)}
